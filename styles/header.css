@@ -48,13 +48,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    /* border: 1px red solid; */
   }
   .header-options {
-    /* width: 645.6px; */
     height: 52px;
     flex-grow: 0;
-    /* border: 1px black solid; */
     align-items: center;
     display: flex;
     gap: 10px;
@@ -71,7 +68,6 @@ header {
     width: 634px;
     flex-grow: 0;
     padding: 11.5px 0 12px;
-    /* border: green 1px solid; */
   }
   .navbar-list{
         width: 631px;
@@ -107,7 +103,6 @@ header {
     padding-right: 16px;
     border-radius: 9999px;
     background-color: #f3f4f6;
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -154,7 +149,6 @@ input:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid red; */
 }
 .dark-mode-icon {
     width: 24px;
@@ -174,7 +168,6 @@ input:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid red; */
 }
 .bascket-icon{
     width: 24px;
@@ -254,13 +247,31 @@ input:focus {
     right: -300%;            
     width: 250px;          
     height: 100vh;       
-    background-color: #333; 
-    color: white;        
+    background-color: #fff;         
     overflow-y: auto;
     transition: right 0.3s ease-in-out;
+    z-index: 1001;
 }
 .side-menu.open {
     right: 0; /* وقتی کلاس open اضافه شود، منو به داخل صفحه می‌آید */
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* مشکی با شفافیت پایین */
+    visibility: hidden; /* در حالت عادی مخفی است */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+    z-index: 1000; /* لایه زیری تمام صفحه */
+  }
+  
+  .overlay.active {
+    visibility: visible; /* وقتی منو باز می‌شود، نمایش داده می‌شود */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
   }
 @media (max-width:1630px) {
     .search-container{
@@ -310,7 +321,7 @@ input:focus {
         display: flex;
         align-items: center;
         justify-content: center;
-        /* border: 1px solid red; */
+        cursor: pointer;
     }
     .menu-icon{
         width: 24px;
@@ -327,12 +338,10 @@ input:focus {
     .logo-phone{
         display: flex;
         height: 100%;
-        /* border: 1px solid red; */
     }
     .header-options-phone{
         display: flex;
         height: 100%;
-        /* border: 1px solid red; */
         align-items: center;
     }
     .bascket-phone {
@@ -344,7 +353,6 @@ input:focus {
         display: flex;
         align-items: center;
         justify-content: center;
-        /* border: 1px solid red; */
     }
     .bascket-phone-icon{
         width: 24px;
@@ -364,7 +372,6 @@ input:focus {
         display: flex;
         align-items: center;
         justify-content: center;
-        /* border: 1px solid red; */
     }
     .login-phone {
         width: 24px;
