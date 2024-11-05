@@ -451,5 +451,19 @@ input:focus {
         border: none;
         background-color: #f3f4f6;
       }
+      .navbar-list{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10px;
+        gap: 10px;
+      }
+      .navbar-item{
+        justify-content: space-between;
+        width: 100%;
+      }
+      .arrow img {
+        transform: rotate(90deg)
+      }
 
 }
