@@ -18,3 +18,7 @@ document.getElementById('menu-toggle').addEventListener('click', function(event)
       overlay.classList.remove('active');
     }
   });
+  document.getElementById('close-menu').addEventListener('click', function() {
+    document.querySelector('.side-menu').classList.remove('open');
+    document.querySelector('.overlay').classList.remove('active');
+  });
